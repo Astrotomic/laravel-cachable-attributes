@@ -1,10 +1,7 @@
 {
   "name": "astrotomic/laravel-cachable-attributes",
-  "description": "Allows to cache attribute accessor values in an easy way.",
-  "homepage": "https://github.com/Astrotomic/laravel-cachable-attributes",
-  "readme": "./README.md",
-  "license": "MIT",
   "type": "library",
+  "description": "Allows to cache attribute accessor values in an easy way.",
   "keywords": [
     "laravel",
     "eloquent",
@@ -14,6 +11,9 @@
     "accessor",
     "getter"
   ],
+  "homepage": "https://github.com/Astrotomic/laravel-cachable-attributes",
+  "readme": "./README.md",
+  "license": "MIT",
   "authors": [
     {
       "name": "Tom Witkowski",
@@ -22,10 +22,18 @@
       "role": "Developer"
     }
   ],
-  "support": {
-    "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
-    "source": "https://github.com/Astrotomic/laravel-cachable-attributes",
-    "email": "dev.gummibeer@gmail.com"
+  "require": {
+    "php": "^7.2",
+    "illuminate/cache": "5.8.* || ^6.0"
+  },
+  "require-dev": {
+    "illuminate/database": "5.8.* || ^6.0",
+    "illuminate/support": "5.8.* || ^6.0",
+    "orchestra/testbench": "3.8.* || ^4.0",
+    "phpunit/phpunit": "^8.3"
+  },
+  "config": {
+    "sort-packages": true
   },
   "autoload": {
     "psr-4": {
@@ -37,22 +45,14 @@
       "Astrotomic\\CachableAttributes\\Tests\\": "tests/"
     }
   },
-  "config": {
-    "sort-packages": true
-  },
-  "require": {
-    "php": "^7.2",
-    "illuminate/cache": "5.8.*|^6.0"
-  },
-  "require-dev": {
-    "illuminate/database": "5.8.*|^6.0",
-    "illuminate/support": "5.8.*|^6.0",
-    "orchestra/testbench": "3.8.*|^4.0",
-    "phpunit/phpunit": "^8.3"
-  },
   "prefer-stable": true,
   "scripts": {
     "test": "vendor/bin/phpunit",
     "test-coverage": "vendor/bin/phpunit --coverage-html=coverage"
+  },
+  "support": {
+    "email": "dev.gummibeer@gmail.com",
+    "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
+    "source": "https://github.com/Astrotomic/laravel-cachable-attributes"
   }
 }
