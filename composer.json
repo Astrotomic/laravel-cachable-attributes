@@ -1,0 +1,48 @@
+{
+  "name": "astrotomic/laravel-cachable-attributes",
+  "description": "Allows to cache attribute accessor values in an easy way.",
+  "keywords": [
+    "laravel",
+    "eloquent",
+    "model",
+    "cache"
+  ],
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Tom Witkowski",
+      "email": "dev.gummibeer@gmail.com",
+      "homepage": "https://gummibeer.de",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Astrotomic\\CachableAttributes\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Astrotomic\\CachableAttributes\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": "^7.2",
+    "illuminate/cache": "5.8.*|^6.0"
+  },
+  "require-dev": {
+    "illuminate/database": "5.8.*|^6.0",
+    "illuminate/support": "5.8.*|^6.0",
+    "orchestra/testbench": "3.8.*|^4.0",
+    "phpunit/phpunit": "^8.1"
+  },
+  "prefer-stable": true,
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html=coverage"
+  }
+}
