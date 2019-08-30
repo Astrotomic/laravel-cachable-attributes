@@ -9,7 +9,10 @@
     "laravel",
     "eloquent",
     "model",
-    "cache"
+    "cache",
+    "attribute",
+    "accessor",
+    "getter"
   ],
   "authors": [
     {
