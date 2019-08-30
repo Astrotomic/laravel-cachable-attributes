@@ -4,6 +4,7 @@ namespace Astrotomic\CachableAttributes\Tests\Unit;
 
 use Astrotomic\CachableAttributes\Tests\TestCase;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
+use InvalidArgumentException;
 
 final class HasCachableAttributesTest extends TestCase
 {
@@ -97,5 +98,18 @@ final class HasCachableAttributesTest extends TestCase
         $this->assertSame(5, $gallery->remember('test', 1, function () {
             return 5;
         }));
+    }
+
+    /** @test */
+    public function it_throws_an_exception_if_ttl_is_below_zero(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        $this->expectExceptionMessage('The TTL has to be null, 0 or any positive number - you provided `-5`.');
+
+        $gallery = $this->gallery();
+        $gallery->save();
+        $gallery->remember('test', -5, function () {
+            return 0;
+        });
     }
 }

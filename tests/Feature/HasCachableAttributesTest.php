@@ -52,10 +52,10 @@ final class HasCachableAttributesTest extends TestCase
 
         $this->assertSame(0, $gallery->storage_size);
 
-        $this->assertTrue(Cache::has('model_attribute_cache.galleries.1.storage_size'));
+        $this->assertTrue(Cache::has('model_attribute_cache.testing.galleries.1.storage_size'));
 
         $gallery->delete();
 
-        $this->assertFalse(Cache::has('model_attribute_cache.galleries.1.storage_size'));
+        $this->assertFalse(Cache::has('model_attribute_cache.testing.galleries.1.storage_size'));
     }
 }

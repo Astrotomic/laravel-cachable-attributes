@@ -3,12 +3,15 @@
 namespace Astrotomic\CachableAttributes;
 
 use Closure;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use Illuminate\Contracts\Cache\Factory as CacheFactoryContract;
+use InvalidArgumentException;
 
 /**
- * @property string $attributeCachePrefix
- * @property string[] $cachableAttributes
+ * @property string|null $attributeCachePrefix
+ * @property string|null $attributeCacheStore
+ * @property string[]|null $cachableAttributes
  *
  * @mixin Model
  */
@@ -24,57 +27,72 @@ trait HasCachableAttributes
         });
     }
 
-    public function remember(string $key, ?int $ttl, Closure $callback)
+    public function remember(string $attribute, ?int $ttl, Closure $callback)
     {
         if ($ttl === 0 || ! $this->exists) {
-            if (! isset($this->attributeCache[$key])) {
-                $this->attributeCache[$key] = value($callback);
+            if (! isset($this->attributeCache[$attribute])) {
+                $this->attributeCache[$attribute] = value($callback);
             }
 
-            return $this->attributeCache[$key];
+            return $this->attributeCache[$attribute];
         }
 
         if ($ttl === null) {
-            return Cache::rememberForever($this->getCacheKey($key), $callback);
+            return $this->getCacheRepository()->rememberForever($this->getCacheKey($attribute), $callback);
         }
 
-        return Cache::remember($this->getCacheKey($key), $ttl, $callback);
+        if($ttl < 0) {
+            throw new InvalidArgumentException("The TTL has to be null, 0 or any positive number - you provided `{$ttl}`.");
+        }
+
+        return $this->getCacheRepository()->remember($this->getCacheKey($attribute), $ttl, $callback);
     }
 
-    public function rememberForever(string $key, Closure $callback)
+    public function rememberForever(string $attribute, Closure $callback)
     {
-        return $this->remember($key, null, $callback);
+        return $this->remember($attribute, null, $callback);
     }
 
-    public function forget(string $key): bool
+    public function forget(string $attribute): bool
     {
-        unset($this->attributeCache[$key]);
+        unset($this->attributeCache[$attribute]);
 
         if (! $this->exists) {
             return true;
         }
 
-        return Cache::forget($this->getCacheKey($key));
+        return $this->getCacheRepository()->forget($this->getCacheKey($attribute));
     }
 
     public function flush(): bool
     {
         $result = true;
 
-        foreach ($this->cachableAttributes as $attribute) {
+        foreach ($this->cachableAttributes ?? [] as $attribute) {
             $result = $this->forget($attribute) ? $result : false;
         }
 
         return $result;
     }
 
-    protected function getCacheKey(string $key): string
+    protected function getCacheKey(string $attribute): string
     {
-        return sprintf('%s.%s.%d.%s',
+        return implode('.', [
             $this->attributeCachePrefix ?? 'model_attribute_cache',
-            $this->table,
+            $this->getConnectionName() ?? 'connection',
+            $this->getTable(),
             $this->getKey(),
-            $key
-        );
+            $attribute,
+        ]);
+    }
+
+    protected function getCacheRepository(): CacheRepository
+    {
+        return $this->getCacheFactory()->store($this->attributeCacheStore);
+    }
+
+    protected function getCacheFactory(): CacheFactoryContract
+    {
+        return app('cache');
     }
 }
