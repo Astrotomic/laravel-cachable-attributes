@@ -3,10 +3,10 @@
 namespace Astrotomic\CachableAttributes;
 
 use Closure;
+use InvalidArgumentException;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Contracts\Cache\Factory as CacheFactoryContract;
-use InvalidArgumentException;
 
 /**
  * @property string|null $attributeCachePrefix
@@ -41,7 +41,7 @@ trait HasCachableAttributes
             return $this->getCacheRepository()->rememberForever($this->getCacheKey($attribute), $callback);
         }
 
-        if($ttl < 0) {
+        if ($ttl < 0) {
             throw new InvalidArgumentException("The TTL has to be null, 0 or any positive number - you provided `{$ttl}`.");
         }
 
