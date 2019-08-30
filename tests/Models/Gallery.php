@@ -2,9 +2,9 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Models;
 
-use Astrotomic\CachableAttributes\HasCachableAttributes;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Astrotomic\CachableAttributes\HasCachableAttributes;
 
 /**
  * @property-read int $storage_size

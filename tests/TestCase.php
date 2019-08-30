@@ -2,18 +2,16 @@
 
 namespace Astrotomic\CachableAttributes\Tests;
 
-use Astrotomic\CachableAttributes\Tests\Models\Gallery;
-use Astrotomic\CachableAttributes\Tests\Models\Image;
+use Illuminate\Support\Str;
 use Illuminate\Cache\ArrayStore;
-use Illuminate\Cache\CacheManager;
 use Illuminate\Cache\Repository;
+use Illuminate\Cache\CacheManager;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Str;
-use Orchestra\Testbench\TestCase as Orchestra;
-use Illuminate\Contracts\Console\Kernel;
-use Astrotomic\Translatable\TranslatableServiceProvider;
 use PHPUnit\Framework\MockObject\MockObject;
+use Orchestra\Testbench\TestCase as Orchestra;
+use Astrotomic\CachableAttributes\Tests\Models\Image;
+use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 
 abstract class TestCase extends Orchestra
 {
@@ -76,8 +74,7 @@ abstract class TestCase extends Orchestra
                 'remember',
                 'rememberForever',
             ])
-            ->getMock()
-        ;
+            ->getMock();
 
         $this->getCache()->extend('array', function ($app, array $config) use ($repository): Repository {
             return $repository;

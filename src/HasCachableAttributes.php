@@ -3,8 +3,8 @@
 namespace Astrotomic\CachableAttributes;
 
 use Closure;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property string $attributeCachePrefix
@@ -19,8 +19,8 @@ trait HasCachableAttributes
 
     public function remember(string $key, ?int $ttl, Closure $callback)
     {
-        if ($ttl === 0 || !$this->exists) {
-            if (!isset($this->attributeCache[$key])) {
+        if ($ttl === 0 || ! $this->exists) {
+            if (! isset($this->attributeCache[$key])) {
                 $this->attributeCache[$key] = value($callback);
             }
 
@@ -43,7 +43,7 @@ trait HasCachableAttributes
     {
         unset($this->attributeCache[$key]);
 
-        if(! $this->exists) {
+        if (! $this->exists) {
             return true;
         }
 
@@ -54,7 +54,7 @@ trait HasCachableAttributes
     {
         $result = true;
 
-        foreach($this->cachableAttributes as $attribute) {
+        foreach ($this->cachableAttributes as $attribute) {
             $result = $this->forget($attribute) ? $result : false;
         }
 

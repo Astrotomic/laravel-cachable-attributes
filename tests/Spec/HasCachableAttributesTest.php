@@ -3,8 +3,6 @@
 namespace Astrotomic\CachableAttributes\Tests\Spec;
 
 use Astrotomic\CachableAttributes\Tests\TestCase;
-use Illuminate\Cache\ArrayStore;
-use Illuminate\Cache\Repository;
 
 final class HasCachableAttributesTest extends TestCase
 {
@@ -18,9 +16,15 @@ final class HasCachableAttributesTest extends TestCase
 
         $gallery = $this->gallery();
 
-        $gallery->remember('test', null, function() { return 0; });
-        $gallery->remember('test', 0, function() { return 0; });
-        $gallery->remember('test', 1, function() { return 0; });
+        $gallery->remember('test', null, function () {
+            return 0;
+        });
+        $gallery->remember('test', 0, function () {
+            return 0;
+        });
+        $gallery->remember('test', 1, function () {
+            return 0;
+        });
         $gallery->forget('test');
     }
 

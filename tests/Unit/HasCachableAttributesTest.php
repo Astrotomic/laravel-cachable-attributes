@@ -2,11 +2,8 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Unit;
 
-use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 use Astrotomic\CachableAttributes\Tests\TestCase;
-use Illuminate\Cache\ArrayStore;
-use Illuminate\Cache\Repository;
-use Illuminate\Support\Str;
+use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 
 final class HasCachableAttributesTest extends TestCase
 {

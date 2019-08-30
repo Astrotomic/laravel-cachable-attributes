@@ -2,11 +2,9 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Feature;
 
-use Astrotomic\CachableAttributes\Tests\Models\Gallery;
-use Astrotomic\CachableAttributes\Tests\TestCase;
-use Illuminate\Cache\ArrayStore;
-use Illuminate\Cache\Repository;
 use Illuminate\Support\Str;
+use Astrotomic\CachableAttributes\Tests\TestCase;
+use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 
 final class HasCachableAttributesTest extends TestCase
 {
@@ -16,7 +14,7 @@ final class HasCachableAttributesTest extends TestCase
         $gallery = new class extends Gallery {
             public function getStorageSizeAttribute(): int
             {
-                return $this->remember('storage_size', 5, function(): int {
+                return $this->remember('storage_size', 5, function (): int {
                     return $this->images()->sum('file_size');
                 });
             }
