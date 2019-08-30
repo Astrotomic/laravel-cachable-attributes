@@ -2,6 +2,7 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Models;
 
+use Astrotomic\CachableAttributes\AttributesCache;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Astrotomic\CachableAttributes\HasCachableAttributes;
@@ -9,7 +10,7 @@ use Astrotomic\CachableAttributes\HasCachableAttributes;
 /**
  * @property-read int $storage_size
  */
-class Gallery extends Model
+class Gallery extends Model implements AttributesCache
 {
     use HasCachableAttributes;
 

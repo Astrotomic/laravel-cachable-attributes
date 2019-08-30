@@ -17,6 +17,13 @@ trait HasCachableAttributes
     /** @var array<string, mixed> */
     protected $attributeCache = [];
 
+    public static function bootHasCachableAttributes(): void
+    {
+        static::deleting(function (Model $model): void {
+            $model->flush();
+        });
+    }
+
     public function remember(string $key, ?int $ttl, Closure $callback)
     {
         if ($ttl === 0 || ! $this->exists) {
@@ -65,7 +72,7 @@ trait HasCachableAttributes
     {
         return sprintf('%s.%s.%d.%s',
             $this->attributeCachePrefix ?? 'model_attribute_cache',
-            strtolower(class_basename(static::class)),
+            $this->table,
             $this->getKey(),
             $key
         );
