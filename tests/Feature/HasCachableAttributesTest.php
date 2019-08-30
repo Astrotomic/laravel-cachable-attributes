@@ -2,8 +2,8 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Feature;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Cache;
 use Astrotomic\CachableAttributes\Tests\TestCase;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 
@@ -35,6 +35,7 @@ final class HasCachableAttributesTest extends TestCase
 
         $this->assertSame(5, $gallery->storage_size);
     }
+
     /** @test */
     public function it_flushes_all_cached_attributes_on_delete(): void
     {

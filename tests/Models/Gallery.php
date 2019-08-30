@@ -2,8 +2,8 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Models;
 
-use Astrotomic\CachableAttributes\AttributesCache;
 use Illuminate\Database\Eloquent\Model;
+use Astrotomic\CachableAttributes\AttributesCache;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Astrotomic\CachableAttributes\HasCachableAttributes;
 
