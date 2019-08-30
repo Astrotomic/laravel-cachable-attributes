@@ -4,7 +4,7 @@
   "homepage": "https://github.com/Astrotomic/laravel-cachable-attributes",
   "readme": "./README.md",
   "license": "MIT",
-  "type": "project",
+  "type": "library",
   "keywords": [
     "laravel",
     "eloquent",
