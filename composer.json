@@ -1,14 +1,16 @@
 {
   "name": "astrotomic/laravel-cachable-attributes",
   "description": "Allows to cache attribute accessor values in an easy way.",
+  "homepage": "https://github.com/Astrotomic/laravel-cachable-attributes",
+  "readme": "./README.md",
+  "license": "MIT",
+  "type": "project",
   "keywords": [
     "laravel",
     "eloquent",
     "model",
     "cache"
   ],
-  "license": "MIT",
-  "type": "project",
   "authors": [
     {
       "name": "Tom Witkowski",
@@ -17,6 +19,11 @@
       "role": "Developer"
     }
   ],
+  "support": {
+    "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
+    "source": "https://github.com/Astrotomic/laravel-cachable-attributes",
+    "email": "dev.gummibeer@gmail.com"
+  },
   "autoload": {
     "psr-4": {
       "Astrotomic\\CachableAttributes\\": "src/"
