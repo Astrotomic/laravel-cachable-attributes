@@ -11,13 +11,12 @@
     "accessor",
     "getter"
   ],
-  "homepage": "https://github.com/Astrotomic/laravel-cachable-attributes",
-  "readme": "./README.md",
+  "homepage": "https://astrotomic.info",
   "license": "MIT",
   "authors": [
     {
       "name": "Tom Witkowski",
-      "email": "dev.gummibeer@gmail.com",
+      "email": "gummibeer@astrotomic.info",
       "homepage": "https://gummibeer.de",
       "role": "Developer"
     }
@@ -51,7 +50,7 @@
     "test-coverage": "vendor/bin/phpunit --coverage-html=coverage"
   },
   "support": {
-    "email": "dev.gummibeer@gmail.com",
+    "email": "dev@astrotomic.info",
     "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
     "source": "https://github.com/Astrotomic/laravel-cachable-attributes"
   }
