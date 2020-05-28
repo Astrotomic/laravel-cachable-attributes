@@ -2,10 +2,10 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Feature;
 
-use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Cache;
-use Astrotomic\CachableAttributes\Tests\TestCase;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
+use Astrotomic\CachableAttributes\Tests\TestCase;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Str;
 
 final class CachesAttributesTest extends TestCase
 {

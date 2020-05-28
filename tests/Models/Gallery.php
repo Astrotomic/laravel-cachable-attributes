@@ -2,11 +2,10 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Astrotomic\CachableAttributes\CachableAttributes;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Astrotomic\CachableAttributes\CachesAttributes;
-use Psr\SimpleCache\CacheInterface;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property-read int $storage_size

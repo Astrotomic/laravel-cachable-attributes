@@ -2,9 +2,9 @@
 
 namespace Astrotomic\CachableAttributes\Tests\Unit;
 
-use InvalidArgumentException;
-use Astrotomic\CachableAttributes\Tests\TestCase;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
+use Astrotomic\CachableAttributes\Tests\TestCase;
+use InvalidArgumentException;
 
 final class CachesAttributesTest extends TestCase
 {

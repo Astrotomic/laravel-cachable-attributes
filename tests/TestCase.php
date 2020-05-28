@@ -2,16 +2,16 @@
 
 namespace Astrotomic\CachableAttributes\Tests;
 
-use Illuminate\Support\Str;
-use Illuminate\Cache\ArrayStore;
-use Illuminate\Cache\Repository;
-use Illuminate\Cache\CacheManager;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
-use PHPUnit\Framework\MockObject\MockObject;
-use Orchestra\Testbench\TestCase as Orchestra;
-use Astrotomic\CachableAttributes\Tests\Models\Image;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
+use Astrotomic\CachableAttributes\Tests\Models\Image;
+use Illuminate\Cache\ArrayStore;
+use Illuminate\Cache\CacheManager;
+use Illuminate\Cache\Repository;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
+use Orchestra\Testbench\TestCase as Orchestra;
+use PHPUnit\Framework\MockObject\MockObject;
 
 abstract class TestCase extends Orchestra
 {

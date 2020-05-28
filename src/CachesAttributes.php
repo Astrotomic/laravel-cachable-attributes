@@ -3,10 +3,10 @@
 namespace Astrotomic\CachableAttributes;
 
 use Closure;
-use InvalidArgumentException;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Contracts\Cache\Repository as CacheRepository;
 use Illuminate\Contracts\Cache\Factory as CacheFactoryContract;
+use Illuminate\Contracts\Cache\Repository as CacheRepository;
+use Illuminate\Database\Eloquent\Model;
+use InvalidArgumentException;
 
 /**
  * @property string|null $attributeCachePrefix
