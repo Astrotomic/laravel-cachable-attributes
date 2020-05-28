@@ -15,14 +15,15 @@ use Illuminate\Contracts\Cache\Factory as CacheFactoryContract;
  *
  * @mixin Model
  */
-trait HasCachableAttributes
+trait CachesAttributes
 {
     /** @var array<string, mixed> */
     protected $attributeCache = [];
 
-    public static function bootHasCachableAttributes(): void
+    public static function bootCachesAttributes(): void
     {
         static::deleting(function (Model $model): void {
+            /** @var Model|CachableAttributes $model */
             $model->flush();
         });
     }

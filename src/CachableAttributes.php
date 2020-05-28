@@ -4,7 +4,7 @@ namespace Astrotomic\CachableAttributes;
 
 use Closure;
 
-interface AttributesCache
+interface CachableAttributes
 {
     /**
      * Get an item from the cache, or execute the given Closure and store the result.
@@ -35,4 +35,11 @@ interface AttributesCache
      * @return bool
      */
     public function forget(string $key): bool;
+
+    /**
+     * Remove all items from the cache.
+     *
+     * @return bool
+     */
+    public function flush(): bool;
 }

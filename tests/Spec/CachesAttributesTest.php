@@ -4,7 +4,7 @@ namespace Astrotomic\CachableAttributes\Tests\Spec;
 
 use Astrotomic\CachableAttributes\Tests\TestCase;
 
-final class HasCachableAttributesTest extends TestCase
+final class CachesAttributesTest extends TestCase
 {
     /** @test */
     public function it_does_not_call_cache_repository_methods_if_model_does_not_exist(): void

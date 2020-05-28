@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Cache;
 use Astrotomic\CachableAttributes\Tests\TestCase;
 use Astrotomic\CachableAttributes\Tests\Models\Gallery;
 
-final class HasCachableAttributesTest extends TestCase
+final class CachesAttributesTest extends TestCase
 {
     /** @test */
     public function it_returns_cached_value_in_second_run(): void

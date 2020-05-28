@@ -1,0 +1,6 @@
+/.github export-ignore
+/.gitattributes export-ignore
+/.styleci.yml export-ignore
+
+# phpunit.xml.dist and tests are not excluded so tests can be run
+# this is usefull if this package ends up one day in Debian
