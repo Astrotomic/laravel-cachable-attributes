@@ -1,10 +1,12 @@
 # Laravel cachable Attributes
 
-[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-cachable-attributes.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes) 
-[![TravisCI](https://img.shields.io/travis/Astrotomic/laravel-cachable-attributes/master.svg?label=TravisCI&style=flat-square&cacheSeconds=600)](https://travis-ci.org/Astrotomic/laravel-cachable-attributes) 
-[![StyleCI](https://styleci.io/repos/205167128/shield)](https://styleci.io/repos/205167128) 
-[![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-cachable-attributes.svg?label=Release&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
-[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-cachable-attributes.svg?label=License&color=blue&style=flat-square&cacheSeconds=600)](https://github.com/Astrotomic/laravel-cachable-attributes/blob/master/LICENSE)
+[![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-cachable-attributes.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
+[![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-cachable-attributes.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-cachable-attributes/blob/master/LICENSE)
+[![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/laravel-cachable-attributes)
+
+[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-cachable-attributes.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-cachable-attributes/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-cachable-attributes/actions?query=workflow%3Arun-tests)
+[![StyleCI](https://styleci.io/repos/205167128/shield)](https://styleci.io/repos/205167128)
 
 **If you want to cache your heavy attribute accessors - this package is for you!**
 
@@ -37,12 +39,12 @@ This example would run the sum query every time you access `$gallery->storage_si
 By using the trait you can prevent this.
 
 ```php
-use Astrotomic\CachableAttributes\AttributesCache;
-use Astrotomic\CachableAttributes\HasCachableAttributes;
+use Astrotomic\CachableAttributes\CachableAttributes;
+use Astrotomic\CachableAttributes\CachesAttributes;
 
-class Gallery extends Model implements AttributesCache
+class Gallery extends Model implements CachableAttributes
 {
-    use HasCachableAttributes;
+    use CachesAttributes;
     
     protected $cachableAttributes = [
         'storage_size',
