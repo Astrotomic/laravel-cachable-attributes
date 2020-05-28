@@ -66,6 +66,23 @@ class Gallery extends Model implements CachableAttributes
 
 This will run the database query only once per request. The ttl of `0` means to cache only for the current runtime. You could also use `null` or `rememberForever()` to remember the value forever (until manually deleted). Or use any positive number to cache for the amount of seconds.
 
+## Changelog
+
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+### Security
+
+Please see [SECURITY](SECURITY.md) for details.
+
+## Credits
+
+- [Tom Witkowski](https://github.com/Gummibeer)
+- [All Contributors](https://github.com/Astrotomic/laravel-cachable-attributes/graphs/contributors)
+
 ## Treeware
 
 You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
