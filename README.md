@@ -65,3 +65,13 @@ class Gallery extends Model implements CachableAttributes
 ```
 
 This will run the database query only once per request. The ttl of `0` means to cache only for the current runtime. You could also use `null` or `rememberForever()` to remember the value forever (until manually deleted). Or use any positive number to cache for the amount of seconds.
+
+## Treeware
+
+You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
+
+It’s now common knowledge that one of the best tools to tackle the climate crisis and keep our temperatures from rising above 1.5C is to [plant trees](https://www.bbc.co.uk/news/science-environment-48870920). If you contribute to my forest you’ll be creating employment for local families and restoring wildlife habitats.
+
+You can buy trees at [offset.earth/treeware](https://plant.treeware.earth/Astrotomic/laravel-cachable-attributes)
+
+Read more about Treeware at https://treeware.earth
