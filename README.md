@@ -1,3 +1,5 @@
+
+
 # Laravel cachable Attributes
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-cachable-attributes.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
@@ -81,9 +83,7 @@ Please see [SECURITY](SECURITY.md) for details.
 ## Credits
 
 - [Tom Witkowski](https://github.com/Gummibeer)
-- [All Contributors](https://github.com/Astrotomic/laravel-cachable-attributes/graphs/contributors)
-
-## Treeware
+- [All Contributors](https://github.com/Astrotomic/laravel-cachable-attributes/graphs/contributors)## Treeware
 
 You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
 
