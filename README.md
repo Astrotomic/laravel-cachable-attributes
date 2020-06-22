@@ -74,12 +74,18 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.### Security
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-If you discover any security related issues, please check [SECURITY](https://github.com/Astrotomic/.github/blob/master/SECURITY.md) for steps to report it.## Credits
+### Security
+
+If you discover any security related issues, please check [SECURITY](https://github.com/Astrotomic/.github/blob/master/SECURITY.md) for steps to report it.
+
+## Credits
 
 - [Tom Witkowski](https://github.com/Gummibeer)
-- [All Contributors](https://github.com/Astrotomic/laravel-cachable-attributes/graphs/contributors)## Treeware
+- [All Contributors](https://github.com/Astrotomic/laravel-cachable-attributes/graphs/contributors)
+
+## Treeware
 
 You're free to use this package, but if it makes it to your production environment I would highly appreciate you buying the world a tree.
 
