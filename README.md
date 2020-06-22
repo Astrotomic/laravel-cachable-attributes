@@ -45,7 +45,7 @@ use Astrotomic\CachableAttributes\CachesAttributes;
 class Gallery extends Model implements CachableAttributes
 {
     use CachesAttributes;
-    
+
     protected $cachableAttributes = [
         'storage_size',
     ];
