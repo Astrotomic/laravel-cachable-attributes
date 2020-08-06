@@ -3,6 +3,7 @@
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/laravel-cachable-attributes.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
 [![MIT License](https://img.shields.io/github/license/Astrotomic/laravel-cachable-attributes.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/laravel-cachable-attributes/blob/master/LICENSE)
 [![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/laravel-cachable-attributes)
+[![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
 
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/laravel-cachable-attributes.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/laravel-cachable-attributes)
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Astrotomic/laravel-cachable-attributes/run-tests?style=flat-square&logoColor=white&logo=github&label=Tests)](https://github.com/Astrotomic/laravel-cachable-attributes/actions?query=workflow%3Arun-tests)
