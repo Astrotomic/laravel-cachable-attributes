@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.3.0 - 2021-02-21
+
+- add PHP 8 support
+- add Laravel 8 support
+
 ## v0.2.0 - 2020-05-28
 
 - rename `\Astrotomic\CachableAttributes\HasCachableAttributes` to `\Astrotomic\CachableAttributes\CachesAttributes`
