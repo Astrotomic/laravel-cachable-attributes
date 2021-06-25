@@ -83,6 +83,7 @@ trait CachesAttributes
             $this->getConnectionName() ?? 'connection',
             $this->getTable(),
             $this->getKey(),
+            app()->getLocale(),
             $attribute,
         ]);
     }
