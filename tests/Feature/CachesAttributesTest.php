@@ -12,7 +12,8 @@ final class CachesAttributesTest extends TestCase
     /** @test */
     public function it_returns_cached_value_in_second_run(): void
     {
-        $gallery = new class extends Gallery {
+        $gallery = new class extends Gallery
+        {
             public function getStorageSizeAttribute(): int
             {
                 return $this->remember('storage_size', 5, function (): int {
@@ -39,7 +40,8 @@ final class CachesAttributesTest extends TestCase
     /** @test */
     public function it_flushes_all_cached_attributes_on_delete(): void
     {
-        $gallery = new class extends Gallery {
+        $gallery = new class extends Gallery
+        {
             public function getStorageSizeAttribute(): int
             {
                 return $this->rememberForever('storage_size', function (): int {
