@@ -1,7 +1,8 @@
 {
     "name": "astrotomic/laravel-cachable-attributes",
-    "type": "library",
     "description": "Allows to cache attribute accessor values in an easy way.",
+    "license": "MIT",
+    "type": "library",
     "keywords": [
         "laravel",
         "eloquent",
@@ -11,8 +12,6 @@
         "accessor",
         "getter"
     ],
-    "homepage": "https://astrotomic.info",
-    "license": "MIT",
     "authors": [
         {
             "name": "Tom Witkowski",
@@ -21,6 +20,12 @@
             "role": "Developer"
         }
     ],
+    "homepage": "https://astrotomic.info",
+    "support": {
+        "email": "dev@astrotomic.info",
+        "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
+        "source": "https://github.com/Astrotomic/laravel-cachable-attributes"
+    },
     "require": {
         "php": "^7.2 || ^8.0",
         "illuminate/cache": "5.8.* || ^6.0 || ^7.0 || ^8.0 || ^9.0",
@@ -32,9 +37,7 @@
         "orchestra/testbench": "3.8.* || ^4.0 || ^5.0 || ^6.0 || ^7.0",
         "phpunit/phpunit": "^8.3 || ^9.0"
     },
-    "config": {
-        "sort-packages": true
-    },
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Astrotomic\\CachableAttributes\\": "src/"
@@ -45,14 +48,11 @@
             "Astrotomic\\CachableAttributes\\Tests\\": "tests/"
         }
     },
-    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html=coverage"
-    },
-    "support": {
-        "email": "dev@astrotomic.info",
-        "issues": "https://github.com/Astrotomic/laravel-cachable-attributes/issues",
-        "source": "https://github.com/Astrotomic/laravel-cachable-attributes"
     }
 }
