@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.4.0 - 2022-04-11
+
+- add Laravel 9 support
+
 ## v0.3.0 - 2021-02-21
 
 - add PHP 8 support
